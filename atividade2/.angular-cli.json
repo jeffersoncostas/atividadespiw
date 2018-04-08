@@ -18,12 +18,13 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
-      "styles": ["./node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "styles.css"
+      "styles": [
+        "styles.css",
+        "../node_modules/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css",
+        "../node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-solid.css"
       ],
-      "scripts": ["./node_modules/jquery/dist/jquery.min.js",
-        "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-        "./node_modules/popper.js/dist/umd/popper.min.js"],
+      "scripts": [
+        ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

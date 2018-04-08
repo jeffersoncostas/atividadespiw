@@ -1,0 +1,44 @@
+
+.postagem{
+    transition: 0.3s all;
+}
+
+.postagem-active{
+    opacity: 1;
+}
+
+.tristezas{
+
+    text-align: right;
+    user-select: none;
+
+}
+
+.tristezas span {
+    line-height: 32px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.tristeza-icon {
+    color: rgb(179, 179, 179);
+    transition: 0.3s all;
+}
+
+.tristeza-icon:hover{
+    transform: scale(1.2)
+}
+.tristeza-ativa{
+    color: rgb(71, 71, 71);
+}
+.input-titulo{
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: .75rem;
+}
+
+.input-texto{
+    display: block;
+
+}

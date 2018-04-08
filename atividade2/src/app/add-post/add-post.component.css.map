@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EACd,UAAU,EAAE,IAAI;CAAI",
+    "sources": [
+        "add-post.component.sass"
+    ],
+    "names": [],
+    "file": "add-post.component.css"
+}

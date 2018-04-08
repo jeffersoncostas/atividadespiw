@@ -1,15 +1,26 @@
-<div class="card border-dark mb-3 mx-auto" style="max-width: 25rem;">
-    <div class="card-body text-dark">
-      <h5 class="card-title">A vida é o fim</h5>
-      <p class="card-text">Todos somos essa qualidade que no fim não significa nada, mas vamos seguindo o meio que nos é dado.</p>
-      <p class="card-text"><small class="text-muted">postado por Matheus a 11min</small></p>
-    </div>
-  </div>
+<div class="card border-dark mb-3 mx-auto postagem" style="max-width: 25rem;" *ngFor="let post of postList">
 
-  <div class="card border-dark mb-3 mx-auto" style="max-width: 25rem;">
-      <div class="card-body text-dark">
-        <h5 class="card-title">Pesadelos ao acordar</h5>
-        <p class="card-text">Temos tanto medo de adormecer para sempre que pudermos fazer aquilo que já temos no nosso coração.</p>
-        <p class="card-text"><small class="text-muted">postado por Jocira a 2d</small></p>
-      </div>
+    <div class="card-body text-dark">
+
+            <i class="fas fa-trash  float-right" style="color:rgb(163, 163, 163)" (click)="deletePost(post)" ></i>
+            <i class="fas fa-edit" style="margin-bottom: 10px;"  (click)='editarPost(post)' *ngIf='post.editPost==false'></i>
+            <i class="fas fa-check" style="margin-bottom: 10px; color: rgb(104, 235, 104);" *ngIf='post.editPost' (click)="concluirEdit(post)" ></i>
+            <i class="fas fa-times-circle" *ngIf="post.editPost" (click)="cancelarEdit(post)"></i>
+
+        <h5 class="card-title"  *ngIf='post.editPost==false' >{{post.titulo | uppercase }}</h5>
+        <input type="text" *ngIf='post.editPost' [(ngModel)]="post.titulo" class="input-titulo" >
+
+        <p class="card-text" *ngIf='post.editPost==false'>{{post.texto}}</p>
+        <input type="text" *ngIf='post.editPost' [(ngModel)]="post.texto" class="input-texto" >
+
+        <p class="card-text">
+            <small class="text-muted">postado por {{post.nomePessoa}}</small> 
+        </p>
+        
+        <div class="tristezas">
+            <span>{{post.tristezas}}</span>
+            <i class="fas fa-frown fa-2x tristeza-icon" (click)="maisTristeza(post)" [class.tristeza-ativa]="post.tristezaDada"></i>
+        </div>
     </div>
+
+</div>

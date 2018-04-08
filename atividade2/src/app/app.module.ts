@@ -1,11 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from "@angular/forms";
+import { HttpModule } from '@angular/http'
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PostsComponent } from './posts/posts.component';
 import { PostsItselfComponent } from './posts-itself/posts-itself.component';
+import { PostService } from './post-service/post-service.service';
+import { AddPostComponent } from './add-post/add-post.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 
 @NgModule({
@@ -13,12 +17,16 @@ import { PostsItselfComponent } from './posts-itself/posts-itself.component';
     AppComponent,
     NavbarComponent,
     PostsComponent,
-    PostsItselfComponent
+    PostsItselfComponent,
+    AddPostComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
