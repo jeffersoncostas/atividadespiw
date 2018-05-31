@@ -1,0 +1,19 @@
+.artigo {
+  margin: 0 auto;
+  width: 450px;
+  background-color: #d8d8d8;
+  padding: 20px;
+}
+
+.artigo .titulo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.artigo .buzz {
+  margin-top: 28px;
+  text-align: right;
+  font-size: 30px;
+  color: salmon;
+}
+/*# sourceMappingURL=style.css.map */

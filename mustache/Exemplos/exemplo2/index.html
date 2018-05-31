@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <section class="artigo">
+    </section>
+    
+    <script id="template" type="text/html">
+      <div class="titulo"><span>Titulo: {{titulo}} </span> </div>
+      <div class="likes"><span>Likes:{{likes}} </span></div>
+      <div class="twets"><span>Tweets: {{tweets}}</span></div>
+      <div class="comentarios"><span>Comentarios: {{comentarios}} </span></div>
+      <div class="buzz"><span>BUZZ:{{buzz}} </span></div>
+      
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

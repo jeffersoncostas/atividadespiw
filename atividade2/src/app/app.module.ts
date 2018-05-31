@@ -26,7 +26,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     AppRoutingModule,
     HttpModule
   ],
-  providers: [PostService],
+  providers: [PostService, HttpModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
