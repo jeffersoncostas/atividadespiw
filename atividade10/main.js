@@ -1,3 +1,12 @@
-let a = "123 "
+let http = require('http');
+let config_express = require('./config/express');
+let db = require('./config/database')
 
-console.log(a)
+let app = config_express();
+
+http.createServer(app)
+  .listen(app.get('port'), function () {
+    console.log("Servidor rodando!");
+  });
+
+db('mongodb://localhost:27017/rede_social_campeoes');

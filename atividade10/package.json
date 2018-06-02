@@ -4,7 +4,7 @@
   "description": "piw_atividade19",
   "main": "main.js",
   "scripts": {
-    "start": "main.js",
+    "start": "node main",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "jefferson",
